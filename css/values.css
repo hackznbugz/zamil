@@ -1,0 +1,41 @@
+.values .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.values .container .box{
+    width:9%;
+    transform: translateY(100%);
+    opacity: 0;
+    transition:.5s;
+}
+
+.values .container .box:nth-of-type(2){
+    transition-delay: .2s;
+}
+.values .container .box:nth-of-type(3){
+    transition-delay: .4s;
+}
+.values .container .box:nth-of-type(4){
+    transition-delay: .6s;
+}
+.values .container .box:nth-of-type(5){
+    transition-delay: .8s;
+}
+
+.values .container .box.focused{
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.values .container .box .icon{
+    width:100px;
+    margin-bottom: 1rem;
+}
+
+.values .container .box .value{
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
