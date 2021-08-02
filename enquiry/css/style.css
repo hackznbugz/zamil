@@ -64,6 +64,7 @@ div.body .enquiry-button{
 
 .popup form .input-div{
     padding: 1rem;
+    padding-bottom:0;
 }
 
 .popup form .input-div label{
