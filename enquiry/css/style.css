@@ -1,0 +1,96 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+div.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: white;
+}
+
+div.body .enquiry-button{
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: .8rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    background: #bbaf6b;
+    color:#fff;
+}
+
+.popup{
+    position: absolute;
+    top: -50%;
+    transition: .8s;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    padding:0;
+    z-index: 100;
+    background:#fff;
+    width:600px;
+    height:500px;
+}
+
+.popup.focused{
+    filter:brightness(100%);
+    top:50%;
+}
+
+.popup .image{
+    display: block;
+    width:50%;
+    height: 100%;
+    background: url(../img/popup.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.popup form{
+    width:50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup form .input-div{
+    padding: 1rem;
+}
+
+.popup form .input-div label{
+    margin-bottom: .3rem;
+    display: block;
+    font-size: .85rem;
+}
+
+.popup form .input-div input, .popup form .input-div textarea{
+    display: block;
+    padding:.5rem 1rem;
+    margin-bottom: .8rem;
+    border: 1px solid #bbaf6b;
+    width: calc(100% - 2rem);
+    resize: none;
+}
+
+.popup form .input-div input:focus, .popup form .input-div textarea:focus{
+    outline: none;
+}
+
+.popup form input[type="submit"]{
+    display: block;
+    width:100%;
+    background:#bbaf6b;
+    color:white;
+    border:none;
+    padding: 1rem 0;
+    cursor: pointer;
+}
