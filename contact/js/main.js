@@ -1,3 +1,3 @@
 $('.explore').click(function(){
-  document.getElementsByClassName("box")[0].scrollIntoView();
+  window.scroll(0,findPos(document.getElementsByClassName("box")[0]));
 })
