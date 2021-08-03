@@ -10,6 +10,7 @@ div.body{
     justify-content: center;
     height: 100vh;
     background: white;
+    transition: .5s;
 }
 
 div.body .enquiry-button{
