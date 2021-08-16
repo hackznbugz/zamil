@@ -54,8 +54,8 @@ nav .container .links{
 
 nav .container .links li{
     list-style-type: none;
-    margin:0 1.5rem;
-    font-size: .8rem;
+    margin:0 1rem;
+    font-size: 1rem;
 }
 
 nav .container .links li:last-of-type{
