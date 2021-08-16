@@ -10,7 +10,6 @@ div.body{
     justify-content: center;
     height: 100vh;
     background: white;
-    transition: .5s;
 }
 
 div.body .enquiry-button{
@@ -65,7 +64,7 @@ div.body .enquiry-button{
 
 .popup form .input-div{
     padding: 1rem;
-    padding-bottom:0;
+    padding-bottom: 0;
 }
 
 .popup form .input-div label{

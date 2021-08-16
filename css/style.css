@@ -28,8 +28,8 @@ nav{
     position: fixed;
     top:0;
     left:0;
+    z-index: 3;
 }
-
 
 nav .container{
     display: flex;
@@ -84,6 +84,40 @@ nav .container .links li a:hover{
     background-size: cover;
     padding-top: 15rem;
     padding-bottom: 10rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main-banner .banner-background{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.main-banner .container{
+    position: relative;
+    z-index: 2;
+}
+
+.main-banner .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1;
 }
 
 .main-banner h1{
@@ -149,6 +183,38 @@ nav .container .links li a:hover{
     display: flex;  
     align-items: center;
     justify-content: space-between;
+    width: calc(100% + 160px);
+    margin-left: -80px;
+}
+
+.news .news-box .row{
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    width:auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.news .news-box .arrow{
+    min-width: 80px;
+    min-height: 170px;
+    align-self: flex-start;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+
+.news .news-box .arrow i{
+    font-size: 1.5rem;
+    color: #e5e2e2;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.news .news-box .arrow i:hover{
+    transform: scale(1.1);
+    color: #dbdbdb;
 }
 
 .news-box .content{
@@ -163,14 +229,13 @@ nav .container .links li a:hover{
     border-radius: 5px;
 }
 
-.news-box .content:nth-of-type(1) .image{
-    background: url(../img/news1.png);
+.news-box .content:not(.active){
+    position: absolute;
+    transform: translateX(-100%);
 }
-.news-box .content:nth-of-type(2) .image{
-    background: url(../img/news2.png);
-}
-.news-box .content:nth-of-type(3) .image{
-    background: url(../img/news3.png);
+
+.news-box .content.active{
+    position: relative;
 }
 
 .news-box .caption{

@@ -28,6 +28,12 @@
     </nav>
 
     <div class="main-banner">
+        <div class="banner-overlay"></div>
+
+        <video autoplay muted loop class="banner-background">
+            <source src="video/promech.mp4" type="video/mp4">
+        </video>
+
         <div class="container">
             <span class="line"></span>
             <h1>We are Promech,</h1>
@@ -48,21 +54,9 @@
             <div class="line"></div>
             <h2>Recent News</h2>
             <div class="news-box">
-                <div class="content">
-                    <div class="image"></div>
-                    <p class="caption">Protesting Pipelines Is Becoming A Growing 'Industry'</p>
-                    <span class="date">June 14, 2021</span>
-                </div>
-                <div class="content">
-                    <div class="image"></div>
-                    <p class="caption">Lebanon Passes Oil Tax Law Ahead of First Energy Rights Auction</p>
-                    <span class="date">June 22, 2021</span>
-                </div>
-                <div class="content">
-                    <div class="image"></div>
-                    <p class="caption">Global Oil Prices Slip, But Remain Near Recent Highs </p>
-                    <span class="date">July 05, 2021</span>
-                </div>
+                <div class="arrow left"><i class="fas fa-chevron-left"></i></div>
+                <div class="row"></div>
+                <div class="arrow right"><i class="fas fa-chevron-right"></i></div>
             </div>
         </div>
     </div>
@@ -238,6 +232,7 @@
     </footer>
 
     <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/news.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/testimonials.js"></script>
 </body>
