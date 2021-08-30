@@ -1,17 +1,20 @@
-isPlaying = false;
+$(document).ready(function(){
+    $('.products .row').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: false,
+      autoplaySpeed: 2000,
+      nextArrow: $('.products .box .arrow.right'),
+      prevArrow: $('.products .box .arrow.left'),
+    }); 
+ });
 
-function PlayOrPause(){
-    if(!isPlaying){
-        $('#video')[0].play();
-        $('.video').addClass('playing');
-        $('.video .overlay img').attr("src","../img/pause-button.png");
-        $('.video .overlay p').html("Click here to pause video");
-        isPlaying = true;
-    }else{
-        $('#video')[0].pause();
-        $('.video').removeClass('playing');
-        $('.video .overlay img').attr("src","../img/play-button.png");
-        $('.video .overlay p').html("Click here to play video");
-        isPlaying = false;
-    }
-}
+$('.buttons .request').click(function(){
+    $('.popup-wrapper').css({'visibility':'visible'});
+    $('.popup').css({'top':'50%'});
+})
+
+$('.popup-wrapper').click(function(){
+    $('.popup-wrapper').css({'visibility':'hidden'});
+    $('.popup').css({'top':'-50%'});
+})

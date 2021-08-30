@@ -31,17 +31,19 @@ var news = [
     }
 ]
 
+var space = 3;
+
 for(i in news){
     $('.news .news-box .row').append('<div class="content"><div class="image" style="background: url(img/' + news[i].img + ');"></div><p class="caption">' + news[i].title + '</p><span class="date">' + news[i].date + '</span></div>');
 }
 
-var space = 3;
-$('.news .news-box .row .content').each(function(){
-    if(space == 0){
-        space = 3;
-        return false;
-    }else{
-        $(this).addClass('active');
-        space--;
-    }
+$(document).ready(function(){
+   $('.news-box .row').slick({
+     slidesToShow: 3,
+     slidesToScroll: 1,
+     autoplay: false,
+     autoplaySpeed: 2000,
+     nextArrow: $('.news-box .arrow.right'),
+     prevArrow: $('.news-box .arrow.left'),
+   }); 
 });

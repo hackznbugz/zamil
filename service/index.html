@@ -17,12 +17,40 @@
             <img src="../img/logo.png" alt="">
 
             <ul class="links">
-                <li><a href="">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Products</a></li>
-                <li class="active"><a href="">Services</a></li>
-                <li><a href="">Quality</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <div class="dropdown">
+                    <a href="/products">
+                        <button class="dropbtn">Products
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    </a>
+                    <div class="dropdown-content">
+                      <a href="/product">Product 1</a>
+                      <a href="/product">Product 2</a>
+                      <a href="/product">Product 3</a>
+                      <a href="/product">Product 4</a>
+                      <a href="/product">Product 5</a>
+                      <a href="/product">Product 6</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="/services">
+                        <button class="dropbtn active">Services
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    </a>
+                    <div class="dropdown-content">
+                      <a href="/service">Service 1</a>
+                      <a href="/service">Service 2</a>
+                      <a href="/service">Service 3</a>
+                      <a href="/service">Service 4</a>
+                      <a href="/service">Service 5</a>
+                      <a href="/service">Service 6</a>
+                    </div>
+                </div>
+                <li><a href="/quality">Quality</a></li>
+                <li><a href="/contact">Contact Us</a></li>
             </ul>
         </div>
     </nav>
@@ -100,31 +128,67 @@
                 <div class="arrow left"><i class="fas fa-chevron-left"></i></div>
                 <div class="row">
                     <div class="service">
-                        <div class="image" style="background: url(../img/service3.png);">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="details">
-                            <div class="overlay"></div>
-                            <h3>Service 3</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur 
-                                sadipscing elitr, sed diam nonumy 
-                                eirmod tempor invidunt ut labore et 
-                                dolore magna.</p>
-                            <a href="">Read More...</a>
+                        <div class="inner">
+                            <div class="image" style="background: url(../img/service3.png);">
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="details">
+                                <div class="overlay"></div>
+                                <h3>Service 3</h3>
+                                <p>Lorem ipsum dolor sit amet, consetetur 
+                                    sadipscing elitr, sed diam nonumy 
+                                    eirmod tempor invidunt ut labore et 
+                                    dolore magna.</p>
+                                <a href="">Read More...</a>
+                            </div>
                         </div>
                     </div>
                     <div class="service">
-                        <div class="image" style="background: url(../img/service4.png);">
-                            <div class="overlay"></div>
+                        <div class="inner">
+                            <div class="image" style="background: url(../img/service4.png);">
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="details">
+                                <div class="overlay"></div>
+                                <h3>Service 4</h3>
+                                <p>Lorem ipsum dolor sit amet, consetetur 
+                                    sadipscing elitr, sed diam nonumy 
+                                    eirmod tempor invidunt ut labore et 
+                                    dolore magna.</p>
+                                <a href="">Read More...</a>
+                            </div>
                         </div>
-                        <div class="details">
-                            <div class="overlay"></div>
-                            <h3>Service 4</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur 
-                                sadipscing elitr, sed diam nonumy 
-                                eirmod tempor invidunt ut labore et 
-                                dolore magna.</p>
-                            <a href="">Read More...</a>
+                    </div>
+                    <div class="service">
+                        <div class="inner">
+                            <div class="image" style="background: url(../img/service5.png);">
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="details">
+                                <div class="overlay"></div>
+                                <h3>Service 5</h3>
+                                <p>Lorem ipsum dolor sit amet, consetetur 
+                                    sadipscing elitr, sed diam nonumy 
+                                    eirmod tempor invidunt ut labore et 
+                                    dolore magna.</p>
+                                <a href="">Read More...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <div class="inner">
+                            <div class="image" style="background: url(../img/service6.png);">
+                                <div class="overlay"></div>
+                            </div>
+                            <div class="details">
+                                <div class="overlay"></div>
+                                <h3>Service 6</h3>
+                                <p>Lorem ipsum dolor sit amet, consetetur 
+                                    sadipscing elitr, sed diam nonumy 
+                                    eirmod tempor invidunt ut labore et 
+                                    dolore magna.</p>
+                                <a href="">Read More...</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -146,7 +210,40 @@
         </div>
     </footer>
 
+    <div class="popup-wrapper">
+    </div>
+    <div class="popup">
+
+        <div class="image">
+        </div>
+
+        <form action="">
+
+            <div class="input-div">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+
+                <label for="mobile">Mobile</label>
+                <input type="tel" name="mobile" id="mobile" />
+
+                <label for="company">Company</label>
+                <input type="text" name="company" id="company" />
+
+                <label for="message">Enquiry regarding this service</label>
+                <textarea name="message" id="message" cols="30" rows="3"></textarea>
+            </div>
+
+            <input type="submit" value="Send" />
+
+        </form>
+
+    </div>
+
     <script src="../js/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

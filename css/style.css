@@ -77,6 +77,66 @@ nav .container .links li a:hover{
     font-weight: 600;
 }
 
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: .8rem;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin:0 1.3rem;
+    cursor: pointer;
+    transition: .3s;
+}
+  
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    font-weight: bold;
+}
+  
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: 1.3rem;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: #fff;
+    background: #bbaf6b;
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #fff;
+}
+
+.dropdown-content a:last-of-type{
+    border:none;
+}
+  
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #fff;
+    color: #bbaf6b;
+}
+  
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .main-banner{
     background:linear-gradient(rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)), url(../img/banner.png);
@@ -188,17 +248,15 @@ nav .container .links li a:hover{
 }
 
 .news .news-box .row{
-    display: flex;  
-    align-items: center;
-    justify-content: space-between;
     width:auto;
     position: relative;
     overflow: hidden;
+    margin: 0 -.5rem;
 }
 
 .news .news-box .arrow{
     min-width: 80px;
-    min-height: 170px;
+    min-height: 200px;
     align-self: flex-start;
     display: flex;  
     align-items: center;
@@ -219,23 +277,17 @@ nav .container .links li a:hover{
 
 .news-box .content{
     width: calc((100% - 3rem) / 3);  
+    transition: .5s;
+    display: inline-block;
+    margin: 0 .5rem;
 }
 
 .news-box .content .image{
-    height: 170px;
+    height: 200px;
     background: #000;
     background-size: cover !important;
     width: 100%;
     border-radius: 5px;
-}
-
-.news-box .content:not(.active){
-    position: absolute;
-    transform: translateX(-100%);
-}
-
-.news-box .content.active{
-    position: relative;
 }
 
 .news-box .caption{
@@ -251,6 +303,7 @@ nav .container .links li a:hover{
     font-size: .8rem;
     margin-top: .8rem;
 }
+
 
 .gallery{
     padding: 5rem 0;
@@ -559,4 +612,69 @@ footer .copyright{
     width:40%;
     margin-bottom: 1rem;
     filter: invert(60%) sepia(3%) saturate(4226%) hue-rotate(14deg) brightness(112%) contrast(100%);
+}
+
+.gallery-carousel{
+    display: none;
+    position: fixed;
+    z-index: 300;
+    width:100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 3rem 0;
+    transition: .3s;
+}
+
+.gallery-carousel .top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom:2rem;
+}
+
+.gallery-carousel .top i{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.gallery-carousel .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% + 200px);
+    margin-left: -100px;
+    height: calc(100vh - 10rem);
+}
+
+.gallery-carousel .row .arrow{
+    width:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.gallery-carousel .row .arrow i{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.gallery-carousel i:hover, .gallery-carousel .row .arrow i:hover{
+    color: #fff;
+}
+
+.gallery-carousel .row .image{
+    display: block;
+    width: 85%;
+    background:url(../gallery/image1.png);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    height: 100%;
+    transition: .2s;
 }
