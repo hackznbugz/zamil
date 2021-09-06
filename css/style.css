@@ -5,6 +5,9 @@ body, *{
     color: #504f4f;
 }
 
+body{
+    overflow-x: hidden;
+}
 
 /* #F3F3F3 */
 
@@ -100,13 +103,27 @@ nav .container .links li a:hover{
 }
   
 /* Dropdown content (hidden by default) */
-.dropdown-content {
+.links.desktop .dropdown-content {
     display: none;
     position: absolute;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     margin-left: 1.3rem;
+}
+
+.links.mobile{
+    transition: .3s;
+}
+
+.links.mobile .dropdown .dropbtn:hover{
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.links.mobile .dropdown-content {
+    display: none;
+    min-width: 100%;
+    z-index: 1;
 }
   
 /* Links inside the dropdown */
@@ -122,6 +139,10 @@ nav .container .links li a:hover{
     border-bottom: 1px solid #fff;
 }
 
+.links.mobile .dropdown-content a {
+    padding: .5rem 2rem;
+}
+
 .dropdown-content a:last-of-type{
     border:none;
 }
@@ -133,8 +154,9 @@ nav .container .links li a:hover{
 }
   
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.links.desktop .dropdown:hover .dropdown-content{
     display: block;
+    background: red;
 }
 
 .main-banner{
@@ -256,7 +278,7 @@ nav .container .links li a:hover{
 
 .news .news-box .arrow{
     min-width: 80px;
-    min-height: 200px;
+    min-height: 250px;
     align-self: flex-start;
     display: flex;  
     align-items: center;
@@ -280,10 +302,11 @@ nav .container .links li a:hover{
     transition: .5s;
     display: inline-block;
     margin: 0 .5rem;
+    align-self: flex-start;
 }
 
 .news-box .content .image{
-    height: 200px;
+    height: 250px;
     background: #000;
     background-size: cover !important;
     width: 100%;
@@ -677,4 +700,137 @@ footer .copyright{
     background-position: center !important;
     height: 100%;
     transition: .2s;
+}
+
+.links.mobile{
+    display: none;
+}
+
+nav .hamburger{
+    display: none;
+}
+
+@media(max-width:930px){
+
+    .main-banner{
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    }
+
+    .container{
+        padding: 0 2rem;
+    }
+
+    nav .links.desktop{
+        display: none;
+    }
+
+    nav .hamburger{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    nav .hamburger span{
+        display: block;
+        width: 35px;
+        height: 3px;
+        background: #bbaf6b;
+        margin: .2rem 0;
+        transition: .3s;
+        border-radius: 10px;
+        
+    }
+
+    nav .hamburger.active span:first-of-type{
+        transform: translateY(9.5px) rotate(45deg);
+    }
+    nav .hamburger.active span:nth-of-type(2){
+        opacity: 0;
+    }
+    nav .hamburger.active span:last-of-type{
+        transform: translateY(-9.5px) rotate(-45deg);
+    }
+
+    nav .container img{
+        width: 120px;
+        display: block;
+    }
+
+    .links.mobile{
+        display: flex;
+        transform: translateX(100%);
+        flex-direction: column;
+        position: fixed;
+        top:3.9rem;
+        width:100%;
+        z-index: 300;
+        background: #fff;
+        box-shadow: 0px 20px 20px rgba(58, 42, 42, 0.2);
+    }
+
+    .links.mobile li, .links.mobile .dropbtn{
+        padding: .5rem 2rem;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        font-size: 1rem;
+    }
+
+    .links.mobile li:hover{
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    .news .news-box .arrow{
+        z-index: 200;
+    }
+
+    .news .news-box .arrow i{
+        border-radius: 50%;
+        padding: .5rem .8rem;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .news .news-box .arrow:first-of-type{
+        transform: translateX(50%);
+    }
+    .news .news-box .arrow:last-of-type{
+        transform: translateX(-50%);
+    }
+
+    .about .box{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about .box .content{
+        padding: 2rem 0;
+    }
+
+    .about .box .content, .about .box .image{
+        width: 100%;
+    }
+
+    .about .box .image{
+        height: 200px;
+    }
+
+    .values .box {
+        flex-direction: column;
+    }
+
+    .values .box .content{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .values .box .content img{
+        width: 100px;
+    }
 }

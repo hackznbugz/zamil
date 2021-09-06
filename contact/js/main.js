@@ -1,13 +1,6 @@
-$('.explore').click(function(){
-  window.scroll(0,findPos(document.getElementsByClassName("box")[0]));
-})
-
-function findPos(obj) {
-    var curtop = 0;
-    if (obj.offsetParent) {
-        do {
-            curtop += obj.offsetTop;
-        } while (obj = obj.offsetParent);
-    return [curtop];
-    }
-}
+$(function() {
+    $(".explore").on('click', function() {
+        $("html, body").animate({
+            scrollTop: $(".box").offset().top - 70}, 2000);
+    });
+});

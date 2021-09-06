@@ -1,3 +1,10 @@
+$(function() {
+    $(".explore").on('click', function() {
+        $("html, body").animate({
+            scrollTop: $(".banner-sub").offset().top - 70}, 2000);
+    });
+});
+
 var news = [
     {
         title: 'Protesting Pipelines Is Becoming A Growing \'Industry\'',
@@ -41,9 +48,25 @@ $(document).ready(function(){
    $('.news-box .row').slick({
      slidesToShow: 3,
      slidesToScroll: 1,
-     autoplay: false,
-     autoplaySpeed: 2000,
+     autoplay: true,
+     autoplaySpeed: 4000,
      nextArrow: $('.news-box .arrow.right'),
      prevArrow: $('.news-box .arrow.left'),
+     responsive: [
+        {
+            breakpoint: 920, // mobile breakpoint
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 500, // mobile breakpoint
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
    }); 
 });

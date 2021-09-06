@@ -15,3 +15,10 @@ function PlayOrPause(){
         isPlaying = false;
     }
 }
+
+$(function() {
+    $(".explore").on('click', function() {
+        $("html, body").animate({
+            scrollTop: $(".what").offset().top - 70}, 2000);
+    });
+});
