@@ -49,7 +49,7 @@ $(document).ready(function(){
      slidesToShow: 3,
      slidesToScroll: 1,
      autoplay: true,
-     autoplaySpeed: 4000,
+     autoplaySpeed: 2000,
      nextArrow: $('.news-box .arrow.right'),
      prevArrow: $('.news-box .arrow.left'),
      responsive: [

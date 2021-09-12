@@ -6,6 +6,15 @@ $(document).ready(function(){
       autoplaySpeed: 2000,
       nextArrow: $('.services .box .arrow.right'),
       prevArrow: $('.services .box .arrow.left'),
+      responsive: [
+        {
+            breakpoint: 650, // mobile breakpoint
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
     }); 
  });
 

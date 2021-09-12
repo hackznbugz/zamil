@@ -65,3 +65,11 @@ $('.testimonials .pagination .round').each(function(){
 
     })
 })
+
+var testimonialHeight = document.getElementsByClassName('testimonial')[0].clientHeight;
+$('.testimonial-wrapper').css({'min-height': testimonialHeight + 'px'});
+
+window.onresize = function(event) {
+    testimonialHeight = document.getElementsByClassName('testimonial')[0].clientHeight;
+    $('.testimonial-wrapper').css({'min-height': testimonialHeight + 'px'});
+};
