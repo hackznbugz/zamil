@@ -755,6 +755,25 @@ nav .hamburger{
 }
 
 @media(max-width:600px){
+    .products .box{
+        position: relative;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .products .box .arrow{
+        position: absolute;
+        top:0%;
+    }
+
+    .products .box .arrow:first-of-type{
+        left:-23%;
+    }
+
+    .products .box .arrow:last-of-type{
+        right:-23%;
+    }
+
     .banner-sub .container{
         flex-direction: column;
     }
@@ -767,5 +786,18 @@ nav .hamburger{
         width: 100%;
         text-align: center;
         margin-bottom: 2rem;
+    }
+
+    .popup .image{
+        display: none;
+    }
+
+    .popup{
+        width: calc(100vw - 4rem);
+        margin: 0 auto;
+    }
+
+    .popup form{
+        width: 100%;
     }
 }
